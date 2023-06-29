@@ -1,5 +1,4 @@
 - To Do List :
-  - Supprimer les rôles discord si possible
-  - Supprimer la backup
-  - Supprimer logo + banniere serveur
-    
+  - [ ] Supprimer les rôles discord si possible
+  - [ ] Supprimer la backup
+  - [ ]Supprimer logo + banniere serveur
