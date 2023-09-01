@@ -12,13 +12,13 @@ print('-------------------------------------------------------------------------
 while True :
     intents = discord.Intents.all()
     intents.members = True
-    channel_name = input("sign (no=ano) ? ")
+    channel_name = input("sign (empty=ano) ? ")
     bot = commands.Bot(command_prefix='!', intents=intents)
     TOKEN = str(input('Token :'))
 #sx
     @bot.event
     async def on_ready():
-        await bot.change_presence(activity=discord.Game(name="Ready to Nuke"))
+        await bot.change_presence(activity=discord.Game(name="Ready"))
         print('')
         print('Destroyer is ready')
         print('Connecté en tant que {0.user}'.format(bot))
@@ -32,7 +32,7 @@ while True :
         for channel in guild.channels:
             await channel.delete()
         for i in range(5):
-            if channel_name == "no":
+            if channel_name == "":
                 await guild.create_text_channel("nuke-by-ano")
             else:
                 await guild.create_text_channel("nuke-by-"+channel_name)
